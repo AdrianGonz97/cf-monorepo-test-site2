@@ -75,7 +75,7 @@ jobs:
               uses: mshick/add-pr-comment@v2
               with:
                   message: |
-                      ### ⚡ Successfully Cloudflare Pages deployed!
+                      ### ⚡ Successfully deployed to Cloudflare Pages!
                       | Name | Link |
                       | :--- | :--- |
                       | Latest commit | ${{ github.event.pull_request.head.sha || github.sha }} |
