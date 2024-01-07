@@ -1,0 +1,25 @@
+name: Test PR
+
+on:
+    pull_request_target:
+
+permissions:
+    deployments: write
+    contents: write
+    pull-requests: write
+
+jobs:
+    mock-deployment:
+        runs-on: ubuntu-latest
+        # echo " running with huntabytes code"
+        steps:
+            - name: Do something
+              run: echo "running with huntabytes code"
+            - name: Check whether the SOME_TOKEN is defined
+              run: if [ -n "$SOME_TOKEN" ]; then
+                  echo "true"
+                  else
+                  echo "false"
+                  fi
+              env:
+                  SOME_TOKEN: ${{ secrets.SOME_TOKEN }}
