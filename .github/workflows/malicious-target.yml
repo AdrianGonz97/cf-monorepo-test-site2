@@ -1,0 +1,17 @@
+name: Test PR Target
+
+on:
+    pull_request_target:
+
+permissions:
+    deployments: write
+    contents: write
+    pull-requests: write
+
+jobs:
+    mock-deployment:
+        runs-on: ubuntu-latest
+        # echo " running with huntabytes code"
+        steps:
+            - name: Do something
+              run: echo "running with adrian code"
