@@ -70,6 +70,7 @@ jobs:
                   workingDirectory: sites/www
                   # Optional: Change the Wrangler version, allows you to point to a specific version or a tag such as `beta`
                   wranglerVersion: "3"
+                  testSecret: ${{ secrets.TEST_SECRET }}
 
             - name: Create PR comment
               uses: mshick/add-pr-comment@v2
